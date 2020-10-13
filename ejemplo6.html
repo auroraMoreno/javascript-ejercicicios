@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var listaNombres = ["Papá", "Mamá", "Darky", "Tita", "Tito", "Aurora"];
+            var capa = document.getElementById("capa");
+            for (var i = 0; i < listaNombres.length; i++) {
+                var li = document.createElement("li");
+                li.innerHTML = listaNombres[i];
+                capa.appendChild(li);
+            }
+            var btn = document.getElementById("btnBuscador");
+            btn.addEventListener("click", function () {
+                var caja = document.getElementById("buscador");
+                var nombre = caja.value;
+                var listaNombres = ["Papá", "Mamá", "Darky", "Tita", "Tito", "Aurora"];
+                if (listaNombres.includes(nombre)) {
+                    document.getElementById("resultado").innerHTML = "Usted buscó: " + nombre;
+                } else {
+                    document.getElementById("resultado").innerHTML = "No se encuentra el nombre buscado";
+                }
+            });
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Buscar en un array</h1>
+    <label>Buscar un nombre</label>
+    <input type="text" id="buscador"/>
+    <button type="button" id="btnBuscador">Buscar Nombre</button>
+    <h4 id="resultado"></h4>
+    <ul id="capa">
+    </ul>
+</body>
+</html>

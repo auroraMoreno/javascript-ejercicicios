@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <a href="https://w3schools.com/">Go to W3Schools.com</a>
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () { //hace cosas cuando pagina lista para recibir instrucciones
+        $("a").click(function (evento) { //captura el párrafo y le adjudica un evento onclick
+            alert("Has pulsado un párrafo"); //cuando se haga onclick en el párrafo saldrá un alert
+            evento.preventDefault(); //impide al elemento capturado realizar la acción que se le ha adjudicado
+        });
+    });
+</script>

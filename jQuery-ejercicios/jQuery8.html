@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1 class="inner">Función JQuery pasando un html</h1>
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var nuevosElementos = $("<div>Elementos que creo en <b>tiempo de ejecución</b>.<h1>En ejecución...</h1></div>");
+        nuevosElementos.appendTo("body"); //lo añade en el body despues de los elementos creados no en tiempo de ejecución
+        $(".inner").before("<p>Test</p>"); //se tiene un elemento que tiene al que se le ha dado una clase "inner" y le dice que lo ponga después
+        var documento = $(document.body); //así se hace para capturar el body y modifcarlo.
+        documento.css("background-color", "#ff8833");
+
+        //documento.body.css("background-color", "#ff8833"); INCORRECTO 
+    });
+</script>

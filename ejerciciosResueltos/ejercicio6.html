@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript">
+        function saludar() {
+            var nombre = document.getElementById("nombre").value;
+            var resultado = document.getElementById("resultado");
+            var date = new Date();
+            var hora = date.getHours();
+
+            if (hora <= 12 && hora > 6) {
+                resultado.innerHTML = "Buenos días, " + nombre;
+            } else if (hora > 12 && hora < 20) {
+                resultado.innerHTML = "Buenas tarde, " + nombre;
+            } else {
+                resultado.innerHTML = "Buenas noches, " + nombre;
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <label>Nombre</label>
+    <input type="text" id="nombre" />
+    <button type="button" onclick="saludar()">Te saludo</button>
+    <h3 id="resultado"></h3>
+</body>
+</html>

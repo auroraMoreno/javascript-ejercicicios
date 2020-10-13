@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <script type="text/javascript">
+        function agregarTxt() {
+            var txt = document.createElement("Input");
+            txt.setAttribute("type", "number");
+            txt.setAttribute("name", "caja");
+            var lbl = document.createElement("label");
+            lbl.innerHTML = "<br/> Introducir número <br/>";
+            var btnRemove = document.createElement("button");
+            btnRemove.setAttribute("type", "button");
+            btnRemove.setAttribute("id", "remove");
+            btnRemove.innerHTML = "Quitar caja de texto";
+            var capa = document.getElementById("capa");
+            capa.appendChild(lbl);
+            capa.appendChild(txt);
+            capa.appendChild(btnRemove);
+
+            //boton calcular media
+            var btn = document.getElementById("calcularMedia");
+            btn.addEventListener("click", function () {
+                var caja = document.getElementsByName("caja");
+              
+                var suma = 0;
+                var media = 0;
+
+                for (var i = 0; i < caja.length; i++) {
+                    var n = caja[i];
+                    var num = parseInt(n.value);
+                    suma += num;
+                    media = suma / caja.length;
+                 
+                }
+                document.getElementById("resultado").innerHTML = "Resultado: " + media;
+
+            });
+
+            //var btn2 = document.getElementById("remove");
+            //btn2.addEventListener("click", function () {
+            //    var caja = document.getElementsByName("caja");
+                
+            //    for (var i = 0; i < caja.length; i++) {
+            //        var c = caja[i];
+            //        var capa = document.getElementById("capa");
+            //        capa.remove(c);
+            //    }
+             
+            //});
+
+
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Calcular media</h1>
+  
+    <button onclick="agregarTxt()">Agregar caja de texto</button>
+    <div id="capa"></div>
+    <button id="calcularMedia">Calcular Media</button>
+    <h3 id="resultado"></h3>
+    
+</body>
+</html>

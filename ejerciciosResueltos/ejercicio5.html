@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript">
+        function comprobarDatos() {
+            var contraseña = document.getElementById("contraseña").value;
+            var contraseñaCorrecta = "contraseña";
+            if (contraseña != contraseñaCorrecta) {
+                alert("La contraseña no es correcta");
+            } else {
+                alert("La contraseña es correcta");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Manejando objetos password</h1>
+
+    <h3>Introduzca su clave de usuario</h3>
+
+    <label>Nombre de usuario</label>
+    <input type="text" id="user" />
+    <br/>
+    <label>Contraseña</label>
+    <input type="password" id="contraseña"/>
+    <br/>
+    <button type="button" onclick="comprobarDatos()">Iniciar sesión</button>
+ 
+</body>
+</html>

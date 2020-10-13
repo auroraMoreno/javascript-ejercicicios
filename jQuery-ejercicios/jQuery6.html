@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>Callback de funciones</h1>
+    <h3>Apilar funciones, para que se ejecuten una detrás de otra</h3>
+    <div id="capa" style="background-color:mediumpurple; width:80px; height:80px ">
+   
+    </div>
+    <button>Go</button>
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(":button").click(function () {
+            //incorrecto
+            //el efcto no deseado porque el movimiento de coordeandas es inmediato pero lo otro tarda 2 segundos
+            //$("#capa").fadeOut(2000);
+            //$("#capa").css({top: 300, left: 200});
+            //$("#capa").fadeIn(2000);
+
+            //correcto
+            $("#capa").fadeOut(2000, function () {
+                $("#capa").css({'top': 300, 'left': 200});
+                $("#capa").fadeIn(2000);
+            });
+
+        });
+    });
+</script>

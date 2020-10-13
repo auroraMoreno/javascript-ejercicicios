@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .classDiv{
+            background-color:lightpink;
+            font-weight:bold;
+        }
+        .classDiv2{
+            background-color:mediumspringgreen;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Añadir y quitar clases CSS en elementos</h1>
+    <div>Mira como cambia el estilo de este div</div>
+    <a>CSS</a>
+    <button>Ocultar h1</button>
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("a").mouseover(function () { //añade una clase especificada en style
+            $("div").addClass("classDiv");
+        });
+        $("a").mouseout(function () { //quita un clase especificada en style
+            $("div").removeClass("classDiv");
+            //$("div").addClass("classDiv2");
+        });
+        $(":button").click(function () { //al hacer click hace desaparecer el h1
+            $("h1").css("display", "none");
+        });
+    });
+</script>

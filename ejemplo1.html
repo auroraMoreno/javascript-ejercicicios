@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript">
+        function sumar() {
+            var caja1 = document.getElementById("num1");
+            var num1 = parseInt(caja1.value);
+            var caja2 = document.getElementById("num2");
+            var num2 = parseInt(caja2.value);
+
+            var total = num1 + num2;
+
+            document.getElementById("resultado").innerHTML = "Resultado sin parámetros: " + total;
+
+        }
+
+        function sumarConParametros(num1, num2) {
+            //var num1 = parseInt(num1.value);
+            //var num2 = parseInt(num2.value);
+            var resultado;
+            resultado = num1 + num2;
+            return resultado;
+            //document.getElementById("resultadoConParametros").innerHTML = "Resultado con parámetros: " +  resultado;
+            
+        }
+    </script>
+</head>
+<body>
+    <label>Número 1</label>
+    <input type="number" id="num1" />
+    <br />
+    <label>Número 2</label>
+    <input type="number" id="num2" />
+    <br />
+    <button type="button" onclick="sumar()">Sumar</button>
+    <button type="button" onclick="sumarConParametros(num1,num2)">Sumar con parámetros</button>
+    <h4 id="resultado"></h4>
+    <h4 id="resultadoConParametros"></h4>
+</body>
+</html>

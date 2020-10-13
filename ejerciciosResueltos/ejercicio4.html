@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript">
+        function convertirAEuros() {
+            var cajaPesetas = document.getElementById("pesetas");
+            var pesetas = parseInt(cajaPesetas.value);
+            var peseta = 166.386;
+            var total = pesetas / peseta;
+            document.getElementById("resultado").innerHTML = "Se trata de " + total.toFixed(2) + " euros";
+        }
+    </script>
+</head>
+<body>
+    <h1>Conversor de pesetas a euros</h1>
+    <label>Introduzca la cantidad en pesetas</label>
+    <input type="number" id="pesetas"/>
+    <button type="button" onclick="convertirAEuros()">Convertir a euros</button>
+    <h4 id="resultado"></h4>
+</body>
+</html>

@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript">
+        function validarEmail() {
+            var cajaEmail = document.getElementById("email");
+            var email = cajaEmail.value;
+            var ultimoPunto = email.lastIndexOf(".");
+            var dominio = email.substr(ultimoPunto);
+            if (email.indexOf("@") == -1) {
+                document.getElementById("resultado").innerHTML = "El email debe de contener una @";
+            } else if (email.lastIndexOf(".") < email.indexOf("@")) {
+                document.getElementById("resultado").innerHTML = "El punto no está en su lugar";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Validar email</h1>
+    <label>Introducir Email</label>
+    <input type="email" id="email" />
+    <button type="button" onclick="validarEmail()">Validar email</button>
+    <h5 id="resultado"></h5>
+</body>
+</html>

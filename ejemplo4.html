@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var lista = document.getElementById("lista");
+            //var contador = parseInt(10);
+            for (var i=1; i <= 10; i++) {
+                var li = document.createElement("li");
+                li.innerHTML = Math.floor(Math.random() * 20);
+                lista.appendChild(li);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Lista de números aleatorios</h1>
+    <label>Números aleatorios</label>
+    <ul id="lista">
+
+    </ul>
+</body>
+</html>

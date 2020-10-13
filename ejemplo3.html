@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var time = new Date();
+            var t = time.getHours();
+            var resultado = document.getElementById("resultado");
+            if (t < 12) {
+                resultado.innerHTML = "Buenos dias";
+            } else if (t > 12 && t < 20) {
+                resultado.innerHTML = "Buenas tardes";
+            } else {
+                resultado.innerHTML = "Buenas noches";
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <h1 id="resultado"></h1>
+</body>
+</html>

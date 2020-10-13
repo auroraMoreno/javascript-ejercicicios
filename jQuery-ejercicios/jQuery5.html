@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>Efectos rápidos con JQuery</h1>
+    <div id="capa" style="background-color:palevioletred; color:palegreen; padding:10px;">
+        Esta capa nos servirá para poner efectos
+    </div>
+    <a href="#" id="ocultarCapa">Ocultar</a>
+    <a href="#" id="mostrarCapa">Mostrar</a>
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#ocultarCapa").click(function () {
+            $("#capa").hide("slow");
+        });
+        $("#mostrarCapa").click(function () {
+            $("#capa").show(3000);
+        });
+    });
+</script>

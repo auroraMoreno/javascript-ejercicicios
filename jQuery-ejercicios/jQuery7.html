@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .class1{
+            background-color:lightpink;
+        }
+    </style>
+</head>
+<body>
+    <h1>Seleccion de elementos</h1>
+    <div style="display:flex; margin:10px">
+        <div id="capa" style="background-color:mediumpurple; width:80px; height:80px "> </div>
+        <div id="capa" style="background-color:mediumpurple; width:80px; height:80px "></div>
+    </div>
+    <div id="div1">
+        <p>Parrafo 1</p>
+        <p>Parrafo 1</p>
+        <p>Parrafo 1</p>
+    </div>
+    <form>
+        <label>Nombre</label>
+        <input type="text" id="nombre" />
+    </form>
+    <button>Go</button>
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+    $(document).ready(function () {
+        var capa = $("div");
+        var inputs = $("input", document.forms[0]); //coge los input del primer formulario de la página y pone de color rojo la letra (input.css())
+        var parrafos_div1 = $("p", "#div1"); //captura las etiquetas p únicamente del div1 
+        $(":button").click(function () {
+            capa.css("background-color", "lightpink");
+            inputs.css("color", "red");
+            parrafos_div1.hide();
+        });
+
+       
+        
+    });
+</script>
